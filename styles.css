@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  overflow: hidden;
+}
+
+.loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: url('https://media.tenor.com/NK3pA3ZuZisAAAAC/fire.gif') center/cover no-repeat;
+  z-index: 9999;
+}
+
+#welcomeText {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.loader-text {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 20px;
+}
+
+.name-effect {
+  font-size: 3rem;
+  color: orange;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.main-content {
+  display: none;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  max-width: 600px;
+  margin: auto;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  color: orange;
+}
+
+.button-group {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-group a {
+  display: inline-block;
+  background-color: #25d366;
+  padding: 12px 25px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.button-group a:hover {
+  transform: scale(1.1);
+}
+
+.flame-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 165, 0, 0.2);
+  animation: flame 1.5s ease-in-out infinite;
+}
+
+@keyframes flame {
+  0% { opacity: 0; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(1); }
+}
